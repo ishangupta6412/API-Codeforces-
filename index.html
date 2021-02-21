@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><link rel="icon" href="CODEFORCESLOGO.png">GLUG(GNU/Linux Users Group)</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="1.js"></script>
+</head>
+<body>
+    <header>
+      <center>
+        <p style="color:white">
+           Code Forces | API 
+        </p>
+      </center>
+    </header>
+    <nav>
+        <button class="headerbutton"><a href="#">Home</a></button>
+        <button class="headerbutton"><a href="#">About</a></button>
+        <button class="headerbutton"><a href="#">Contacts</a></button>
+    </nav>
+    <br><br><br>
+    <style>
+        body {
+          background-image: url('hao-wang-pVq6YhmDPtk-unsplash.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+        button {
+          background-color: aquamarine;
+          border-radius: 5px;
+        
+          border-color: chartreuse;
+        }
+
+        header {
+          font-size: 50px;
+        }
+    </style>
+    <center>
+    <main>
+        <section>
+            <form id="form">
+                <label for="username" style="color:white">User name:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <input type="submit" id="submit" value="Submit">
+              </form>
+              <div id="results">
+                
+              </div>
+        </section>
+    </main>
+    </center>
+</body>
+<!-- <script>
+  var form = document.getElementById('form')
+
+  form.addEventListener('submit',function(e){
+      
+      e.preventDefault()
+
+      var username = document.getElementById('username').value
+
+      fetch(" https://codeforces.com/api/user.info?handles=DmitriyH;Fefer_Ivan",{
+        method: 'POST',
+        body:JSON.stringify({
+           username:username,
+        }),
+        headers:{
+          "Content-Type":"application/json; charset= UTF-8"
+        }
+      })
+      .then(function(response){
+          return response.json()
+      })
+      .then(function(data){
+          console.log(data)
+          var results = document.getElementById('results')
+
+          results.innerHTML = `<p> The UserName of the codechef id is ${data.username}</p>`
+      })
+  })
+</script> -->
+</html>
+
+
